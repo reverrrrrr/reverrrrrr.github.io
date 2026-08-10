@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rever's space</title>
+    <style>
+        body{
+            margin:0;
+            height:100vh;
+            background-color: rgb(254, 151, 170);
+        }
+        .flex{
+            display: flex;
+        }
+        .flexfull{
+            flex: 1;
+        }
+        .bg{
+            background-color: rgba(255, 235, 205, 0.338);
+        }
+        .colume{
+            flex-direction: column;
+        }
+        .row{
+            flex-direction: row;
+        }
+        .text{
+            font-weight: bold;
+            color: rgb(163, 31, 59);
+            text-align: center;
+        }
+        @font-face {
+            font-family: 'Font1';
+            src: url('font/QiuYeYuanTi-16.ttf') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+         .font-one {
+            font-family: 'Font1',
+            sans-serif;
+        }
+
+        .bg-pic{
+            background-image: url('pic/bubble-b.GIF');
+            background-repeat: no-repeat;
+            background-position: bottom left;
+            background-attachment: fixed;
+            background-size: 165px auto;
+        }
+        .page-content {
+            display: none;
+        }
+        .page-content.active {
+            display: block;
+        }
+
+        .game-container {
+            width: 100%;
+            height: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+
+        }
+        .game-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .game-icon{
+            width: 72px;
+            height: 72px;
+            margin: 12px;
+        }
+
+        .btn-back {
+            background: rgba(163, 31, 59, 0.2);
+            border: none;
+            padding: 6px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            color: rgb(163, 31, 59);
+            font-weight: bold;
+        }
+        .btn-back:hover {
+            background: rgba(163, 31, 59, 0.3);
+        }
+
+
+    </style>
+</head>
+<body class="colume flexfull flex font-one bg-pic">
+    <!--title-->
+     <div class="row flex">
+        <div style="margin-left: 20px;"><img src="pic/title.GIF" style="height: 150px;"/></div>
+        <div class="flexfull" style="text-align: end;">
+            <img src="pic/bubble-t.GIF" style="height: 150px;"/>
+        </div>
+     </div>
+     <!--body-->
+     <div class="row flex flexfull font-one">
+            <!--side-->
+             <div style="width: 150px;margin-top: 10px;margin-left: 5px;margin-right: 5px;" class="colume">
+                <!--sidetitle-->
+                <div style="margin-top: 10px;margin-bottom:10px">
+                    <div class="text" style="font-size: 25px;color: rgba(255, 235, 205, 0.6);">Rever's Space</div>
+                </div>
+                <!--choice-->
+                <div style="width:150px;height: 30px;border-radius: 5px;margin-top: 5px;margin-bottom:5px;" class="bg nav-item">
+                    <div class="text" style="font-size: 20px;padding-top: 5px;">MyGame</div>
+                </div>
+                <div style="width:150px;height: 30px;border-radius: 5px;margin-top: 5px;margin-bottom:5px" class="bg nav-item">
+                    <div class="text" style="font-size: 20px;padding-top: 5px;">MyPodcast</div>
+                </div>
+                <div style="width:150px;height: 30px;border-radius: 5px;margin-top: 5px;margin-bottom:5px" class="bg nav-item">
+                    <div class="text" style="font-size: 20px;padding: 5px;">MyBlog</div>
+                </div>
+             </div>
+ 
+            <!--main-->
+             <div style="margin-left: 5px;margin-right: 5px;border-radius: 10px;" class="flexfull bg text colume">
+                <div id="page-main" class="page-content active">
+                    <div style="border-radius: 10px;text-align: left;margin-top: 5px;margin-left:5px;margin-right: 5px;margin-bottom: 30px;" class="flexfull bg">
+                        <div style="margin-top: 5px;margin-left:5px;margin-right: 5px;padding: 5px;line-height: 1.5;">
+                            欢迎来到我的网站！我是Rever！在这里你可以看到我的一些作品和思考，希望你可以享受它们！<br/><br/>我的微博：<a href="https://weibo.com/7810254190">EEEEEEEEEEEEEEEEEEEEEEEEEEEEEF</a><br/>我的X：<a href="https://weibo.com/7810254190">EEEEEEEEEEEEEEEEEEEEEEEEEEEEEF</a><br/>如果你想联系我，我的邮箱：abracadabra0915@163.com<br/>
+                        </div>
+                    </div>
+                    <!--mygame-->
+                    <div style="height:170px;margin-left:5px;margin-right: 5px;">
+                        <!--title-->
+                        <div style="border-radius: 10px;margin-top: 10px;" class="flexfull bg">
+                            <div style="font-size: 25px;padding: 5px;text-align: left;">MyGame</div>
+                        </div>
+                        <!--content-->
+                        <div class="flexfull flex row">
+                            <!--1-->
+                            <div class="game-icon" onclick="navigateTo('game-1')" style="width: 150px;">
+                                <image src="pic/Add_It_03web.icon.png" style="height: 90px;text-align: center;"/>
+                                <div style="font-size: 15px;margin-left: 12px;margin-top: 5px;" class="text">AddIt!</div>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+
+                    <!--mypodcast-->
+                    <div style="height:170px;margin-left:5px;margin-right: 5px;">
+                        <!--title-->
+                        <div style="border-radius: 10px;margin-top: 10px;" class="flexfull bg">
+                            <div style="font-size: 25px;padding: 5px;text-align: left;">MyPodcast</div>
+                        </div>
+                        <!--content-->
+                        <div class="flexfull flex row" style="margin-top: 10px;margin-left: 10px;">
+                            <!--3-->
+                            <div onclick="navigateTo('podcast-3')" style="width: 150px;">
+                                <image src="pic/brat-font(1)(1).png" style="height: 90px;text-align: center;"/>
+                                <div style="font-size: 15px;margin-top: 5px;" class="text">SP<br/>第2期</div>
+                            </div>
+                            <!--2-->
+                            <div onclick="navigateTo('podcast-2')" style="width: 150px;">
+                                <image src="pic/nj.jpg" style="height: 90px;text-align: center;"/>
+                                <div style="font-size: 15px;margin-top: 5px;" class="text">SP<br/>第1期</div>
+                            </div>
+                            <!--1-->
+                            <div onclick="navigateTo('podcast-1')" style="width: 150px;">
+                                <image src="pic/brat-font(1)(1).png" style="height: 90px;text-align: center;"/>
+                                <div style="font-size: 15px;margin-top: 5px;" class="text">历史的言语<br/>第0期</div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!--myblog-->
+                    <div style="height:125px;margin-left:5px;margin-right: 5px;">
+                        <!--title-->
+                        <div style="border-radius: 10px;margin-top: 10px;" class="flexfull bg">
+                            <div style="font-size: 25px;padding: 5px;text-align: left;">MyBlog</div>
+                        </div>
+                        <!--content-->
+                        <div class="flexfull flex row" style="margin-top: 10px;margin-left: 10px;">
+                            <!--2-->
+                            <div onclick="navigateTo('blog-2')" class="bg" style="height: 60px;width: 200px;border-radius: 5px;">
+                                <div style="font-size: 20px;margin: 10px;">
+                                    26.08.09<br/>文化、审美、生活
+                                </div>
+                            </div>
+                            <!--1-->
+                            <div onclick="navigateTo('blog-1')" class="bg" style="height: 60px;width: 200px;border-radius: 5px;margin-left: 10px;">
+                                <div style="font-size: 20px;margin: 10px;">
+                                    26.07.27<br/>关于charlixcx新专
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--choicepage-->
+
+                <!--game-->
+                <!--1-->
+                <div id="page-game-1" class="page-content" style="margin-left:5px;margin-right: 5px;margin-top: 10px;">
+                    <div style="display:flex;justify-content:space-between;align-items:center;border-radius: 10px;" class="flexfull bg">
+                        <div style="font-size: 28px;padding: 5px;">AddIt!</div>
+                        <button class="btn-back font-one" onclick="navigateTo('main')">返回</button>
+                    </div>
+                      <div style="margin-top:10px;text-align: left;margin-left:5px;margin-right: 5px;line-height:1.5 ;margin-bottom: 10px;">
+                        *游戏链接<br/><a href="https://reverrrrrr.itch.io/add-itdemo">AddIt!</a><br/>
+                      </div>
+                      <div style="margin-top:10px;text-align: left;margin-left:5px;margin-right: 5px;line-height:1.5 ;margin-bottom: 10px;">
+                        *关于游戏*<br/>在这个游戏中，你需要找到各种色块并运用它们的能力，到达终点！<br/><br/>（目前只有教学关和第一关。
+                      </div>
+                </div>
+
+                <!--podcast-->
+                <!--1-->
+                <div id="page-podcast-1" class="page-content" style="margin-left:5px;margin-right: 5px;margin-top: 10px;">
+                    <div style="border-radius: 10px; justify-content:space-between; align-items:center; padding:0 10px;" class="flexfull bg row flex">
+                        <div style="font-size: 25px;padding: 5px;text-align: left;">【历史的言语】第0期：历史的重要性以及为何不可能</div>
+                        <button class="btn-back font-one" style="text-align:end" onclick="navigateTo('main')">返回</button>
+                    </div>
+                    <div style="margin-top:10px;text-align: left;margin-left:5px;margin-right: 5px;line-height:1.5 ;margin-bottom: 10px;">
+                        *节目链接<br/> 小宇宙：<a href="https://www.xiaoyuzhoufm.com/episode/6a03f1b71b7bd502950b847f">历史的言语 00</a><br/> 喜马拉雅：<a href="http://m.ximalaya.com/sound/976287787">历史的言语 00</a><br/>
+                    </div>
+                </div>
+                <!--2-->
+                <div id="page-podcast-2" class="page-content" style="margin-left:5px;margin-right: 5px;margin-top: 10px;">
+                    <div style="border-radius: 10px; justify-content:space-between; align-items:center; padding:0 10px;" class="flexfull bg row flex">
+                        <div style="font-size: 25px;padding: 5px;text-align: left;">【SP 01】NewJeans：个人信念与资本社会的冲突，和一次突破的实践</div>
+                        <button class="btn-back font-one" style="text-align:end" onclick="navigateTo('main')">返回</button>
+                    </div>
+                    <div style="margin-top:10px;text-align: left;margin-left:5px;margin-right: 5px;line-height:1.5 ;margin-bottom: 20px;">
+                        *节目链接<br/> 小宇宙：<a href="https://www.xiaoyuzhoufm.com/episode/6a608506a3fec224d5a19556">SP 01正片</a>&nbsp;&nbsp;<a href="https://www.xiaoyuzhoufm.com/episode/6a6824dd56a3f3491ba6167b">SP 01补充</a><br/>
+                         喜马拉雅：<a href="http://m.ximalaya.com/sound/1002289890">SP 01正片</a>&nbsp;&nbsp;<a href="http://m.ximalaya.com/sound/1003290631">SP 01补充</a><br/>
+                    </div>
+                    <div style="margin-left:5px;margin-right: 5px;margin-bottom: 10px;">
+                        <div style="margin-top:10px;text-align: left;line-height:1.5;">
+                            *参考大纲<br/>
+                        </div>
+                        <mark-down style="text-align: left;line-height:1.5 ;" src="text/大纲sp1.md"></mark-down>
+                    </div>
+                </div>
+                <!--3-->
+                <div id="page-podcast-3" class="page-content" style="margin-left:5px;margin-right: 5px;margin-top: 10px;">
+                    <div style="border-radius: 10px; justify-content:space-between; align-items:center; padding:0 10px;" class="flexfull bg row flex">
+                        <div style="font-size: 25px;padding: 5px;text-align: left;">【SP 02】肉体感觉与判断：对最近一些事件的看法</div>
+                        <button class="btn-back font-one" style="text-align:end" onclick="navigateTo('main')">返回</button>
+                    </div>
+                    <div style="margin-top:10px;text-align: left;margin-left:5px;margin-right: 5px;line-height:1.5 ;margin-bottom: 20px;">
+                        *节目链接<br/> 小宇宙：<a href="https://www.xiaoyuzhoufm.com/episode/6a76ef61c4079d62c57f3d50">SP 02</a><br/> 喜马拉雅：<a href="http://m.ximalaya.com/sound/1005285250">SP 02</a><br/>
+                    </div>
+                    <div style="margin-left:5px;margin-right: 5px;margin-bottom: 10px;">
+                        <div style="margin-top:10px;text-align: left;line-height:1.5;">
+                         *参考大纲<br/>
+                        </div>
+                        <mark-down style="text-align: left;line-height:1.5 ;" src="text/大纲sp2.md"></mark-down>
+                    </div>
+                </div>
+
+                <!--blog-->
+                <!--1-->
+                <div id="page-blog-1" class="page-content" style="margin-left:5px;margin-right: 5px;margin-top: 10px;">
+                    <div style="border-radius: 10px; display:flex; justify-content:space-between; align-items:center; padding:0 10px;" class="flexfull bg">
+                        <div style="font-size: 28px;padding: 5px">26.07.27</div>
+                        <button class="btn-back font-one" onclick="navigateTo('main')">返回</button>
+                    </div>
+                    
+                    <div style="margin-left:10px;margin-right: 10px;margin-bottom: 10px;">
+                        <mark-down style="text-align: left;line-height:1.5 ;" src="text/260727.md"></mark-down>
+                    </div>
+                </div>
+                <!--2-->
+                <div id="page-blog-2" class="page-content" style="margin-left:5px;margin-right: 5px;margin-top: 10px;">
+                    <div style="border-radius: 10px; display:flex; justify-content:space-between; align-items:center; padding:0 10px;" class="flexfull bg">
+                        <div style="font-size: 28px;padding: 5px">26.08.09</div>
+                        <button class="btn-back font-one" onclick="navigateTo('main')">返回</button>
+                    </div>
+                    
+                    <div style="margin-left:10px;margin-right: 10px;margin-bottom: 10px;">
+                        <mark-down style="text-align: left;line-height:1.5 ;" src="text/260809.md"></mark-down>
+                    </div>
+                </div>
+            </div>
+     </div>
+
+     <script>
+        
+        function navigateTo(pageId) {
+            document.querySelectorAll('.page-content').forEach(function(page) {
+                page.classList.remove('active');
+            });
+
+            var targetPage = document.getElementById('page-' + pageId);
+            if (targetPage) {
+                targetPage.classList.add('active');
+            }
+
+            var mainContent = document.getElementById('mainScroll');
+            if (mainContent) {
+                mainContent.scrollTop = 0;
+            }
+
+            if (history.pushState) {
+                history.pushState({ page: pageId }, '', '#' + pageId);
+            }
+        }
+
+        window.addEventListener('popstate', function(e) {
+            if (e.state && e.state.page) {
+                var target = document.getElementById('page-' + e.state.page);
+                if (target) {
+                    navigateTo(e.state.page);
+                }
+            }
+        });
+
+        window.addEventListener('load', function() {
+            var hash = window.location.hash.replace('#', '');
+            if (hash && document.getElementById('page-' + hash)) {
+                navigateTo(hash);
+            }
+        });
+
+        window.navigateTo = navigateTo;
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        class MarkdownElement extends HTMLElement {
+            connectedCallback() {
+                const src = this.getAttribute('src');
+                if (src) {
+                    fetch(src)
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error('文章文件加载失败 (HTTP ' + response.status + ')');
+                            }
+                            return response.text();
+                        })
+                        .then(markdown => {
+                            this.innerHTML = marked.parse(markdown);
+                        })
+                        .catch(err => {
+                            this.innerHTML = `<p style="color:red;padding:20px;border:1px solid red;">❌ 加载文章失败：${err.message}<br><br>请检查：<br>1. 文件路径是否正确：${src}<br>2. 文件是否存在</p>`;
+                        });
+                }
+            }
+        }
+        customElements.define('mark-down', MarkdownElement);
+    </script>
+</body>
+</html>
